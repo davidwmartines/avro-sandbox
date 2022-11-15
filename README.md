@@ -20,7 +20,7 @@ From a reader schema perspective:
 
 2.  Fields are considered "required" unless a `default` is specified.  
      - A reader cannot add a required field in a backwards-compatible manner. 
-     - A reader can remove a required field in a backwards-compatible mannner.
+     - A reader can remove a required field in a backwards-compatible manner.
      - A writer may add a new required field and still be considered a forwards-compatible change.
 
 3.  Setting a field's type to a union of "null" and one or more other types, means it is "nullable" (can contain `null`, i.e. `None` in Python), **but does not make it optional**.
