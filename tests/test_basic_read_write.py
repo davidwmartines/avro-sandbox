@@ -1,6 +1,7 @@
-from fastavro import reader, writer, parse_schema, schemaless_reader, schemaless_writer
 from io import BytesIO
 
+from fastavro import (parse_schema, reader, schemaless_reader,
+                      schemaless_writer, writer)
 
 schema_1 = {
     "doc": "a test schema",
