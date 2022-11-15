@@ -84,7 +84,7 @@ def test_nullable_field_in_reader():
     assert record["f2"] is None
 
 
-def test_nullable_field_no_default_in_reader():
+def test_nullable_field_no_default_in_reader_raises():
 
     writer_schema = parse_schema(schema_1)
 
@@ -94,7 +94,7 @@ def test_nullable_field_no_default_in_reader():
 
     reader_schema = parse_schema(schema_3)
 
-    # no default value for the optional field... raises error
+    # no default value for the new field... raises error on read
     with pytest.raises(SchemaResolutionError):
         schemaless_reader(fo, writer_schema=writer_schema, reader_schema=reader_schema)
 
